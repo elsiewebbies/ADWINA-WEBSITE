@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GALLERY</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+* { box-sizing: border-box; }
+html, body { margin: 0; scroll-behavior: smooth; font-family: Arial, sans-serif; }
+
+/* BACKGROUND */
+body {
+    background: linear-gradient(-45deg, #ffb3d9, #b3e5ff, #d8baff, #c8ffd4);
+    background-size: 400% 400%;
+    animation: gradientMove 6s ease infinite;
+}
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* WRAPPER */
+.wrapper { min-height: 100vh; display: flex; flex-direction: column; }
+
+/* NAVBAR */
+.navbar {
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+    background: rgba(255,255,255,0.85);
+    backdrop-filter: blur(10px);
+    border-radius: 40px;
+    border: 2px solid rgba(90,62,140,0.3);
+    padding: 12px 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+.navbar a {
+    text-decoration: none;
+    color: #5a3e8c;
+    padding: 6px 14px;
+    font-size: 0.95rem;
+}
+.navbar a:not(:last-child) { border-right: 1px solid rgba(90,62,140,0.3); }
+.navbar a:last-child { border-right: none; }
+.navbar a:hover { color: #000; }
+
+/* CONTENT */
+.content { flex: 1; padding: 20px 40px; display: flex; flex-direction: column; align-items: center; }
+
+/* GALLERY BOX */
+.gallery-box {
+    width: 100%;
+    max-width: 1000px;
+    padding: 30px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    margin-bottom: 40px;
+}
+
+/* HEADER */
+header { text-align: center; margin-bottom: 30px; }
+header h1 { color: #5a3e8c; }
+header p { color: #555; }
+
+/* GALLERY GRID */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    width: 100%;
+}
+
+/* IMAGE CARD */
+.gallery-item {
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    border: 2px solid rgba(255,255,255,0.6);
+}
+.gallery-item img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+.gallery-item:hover { transform: scale(1.03); }
+
+/* VIDEO SECTION */
+.video-section {
+    margin-top: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.video-section video {
+    width: 100%;
+    max-width: 1000px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* LIGHTBOX */
+#lightbox {
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(255,255,255,0.3);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.85rem;
+    color: #555;
+    padding: 15px;
+    background: rgba(255,255,255,0.3);
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="biodata.html">Biodata</a>
+        <a href="hobby.html">Hobby</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- CONTENT -->
+    <main class="content">
+
+        <!-- IMAGE GALLERY -->
+        <div class="gallery-box">
+            <header>
+                <h1>Adwina's Visual Diary</h1>
+                <p>A collection of her memorable moments</p>
+            </header>
+
+            <!-- GALLERY GRID -->
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="1.jpg" alt="Gallery 1"></div>
+                <div class="gallery-item"><img src="2.jpg" alt="Gallery 2"></div>
+                <div class="gallery-item"><img src="3.jpg" alt="Gallery 3"></div>
+                <div class="gallery-item"><img src="4.jpg" alt="Gallery 4"></div>
+                <div class="gallery-item"><img src="5.jpg" alt="Gallery 5"></div>
+                <div class="gallery-item"><img src="6.jpg" alt="Gallery 6"></div>
+                <div class="gallery-item"><img src="7.jpg" alt="Gallery 7"></div>
+                <div class="gallery-item"><img src="8.jpg" alt="Gallery 8"></div>
+                <div class="gallery-item"><img src="9.jpg" alt="Gallery 9"></div>
+                <div class="gallery-item"><img src="10.jpeg" alt="Gallery 10"></div>
+                <div class="gallery-item"><img src="11.jpeg" alt="Gallery 11"></div>
+                <div class="gallery-item"><img src="12.jpeg" alt="Gallery 12"></div>
+                <div class="gallery-item"><img src="13.jpeg" alt="Gallery 13"></div>
+                <div class="gallery-item"><img src="14.jpeg" alt="Gallery 14"></div>
+                <div class="gallery-item"><img src="15.jpeg" alt="Gallery 15"></div>
+                <div class="gallery-item"><img src="16.jpeg" alt="Gallery 16"></div>
+        </div>
+
+        <!-- VIDEO SECTION -->
+        <div class="gallery-box">
+            <header>
+                <p>Watch this special video</p>
+            </header>
+
+            <div class="video-section">
+                <video src="win.mp4" controls autoplay loop muted></video>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- LIGHTBOX -->
+    <div id="lightbox">
+        <img src="" alt="Zoomed Image">
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="copyright" style="color:#5a3e8c; font-weight:600;">
+            © 2025 ELSIE KULAN · All Rights Reserved
+        </div>
+        <div class="rights" style="color:#7a5fae; font-size:0.82rem; margin-top:4px;">
+            This website is developed to fulfill the requirement of IMD318 individual website.
+        </div>
+        <span class="date" style="display:block; color:#9c8fd1; font-size:0.75rem; margin-top:6px; opacity:0.8;">
+            <script type="text/javascript">
+                document.write("Current Date: " + Date());
+            </script>
+        </span>
+    </footer>
+
+</div>
+
+<script>
+const lightbox = document.getElementById('lightbox');
+const lightboxImage = lightbox.querySelector('img');
+
+document.querySelectorAll('.gallery-item img').forEach(img => {
+    img.addEventListener('click', () => {
+        lightbox.style.display = 'flex';
+        lightboxImage.src = img.src;
+    });
+});
+
+lightbox.addEventListener('click', e => {
+    if(e.target !== lightboxImage) lightbox.style.display = 'none';
+});
+</script>
+
+</body>
+</html>

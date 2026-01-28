@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CONTACT</title>
+
+<!-- Font Awesome (Brand icons included) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+
+<style>
+* { box-sizing: border-box; }
+
+html, body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* BACKGROUND */
+body {
+    background: linear-gradient(-45deg, #ffb3d9, #b3e5ff, #d8baff, #c8ffd4);
+    background-size: 400% 400%;
+    animation: gradientMove 6s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* WRAPPER */
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVBAR */
+.navbar {
+    margin: 15px auto;
+    display: flex;
+    justify-content: center;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 40px;
+    padding: 12px 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #5a3e8c;
+    padding: 6px 14px;
+    font-size: 0.95rem;
+}
+
+.navbar a:not(:last-child) {
+    border-right: 1px solid rgba(90,62,140,0.3);
+}
+
+.navbar a:hover {
+    color: #000;
+}
+
+/* CONTENT */
+.content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 20px;
+}
+
+/* CONTACT CARD */
+.contact-box {
+    width: 100%;
+    max-width: 650px;
+    padding: 40px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(14px);
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* HEADER */
+.contact-box h1 {
+    color: #5a3e8c;
+    margin-bottom: 10px;
+}
+
+.contact-box p {
+    color: #555;
+    margin-bottom: 30px;
+}
+
+/* ICON BAR */
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 25px;
+    background: rgba(255,255,255,0.35);
+    border-radius: 60px;
+    backdrop-filter: blur(12px);
+    flex-wrap: wrap;
+}
+
+/* ICON ITEM */
+.icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* ICON STYLE */
+.contact-icons a {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.9rem;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+/* ICON TEXT */
+.icon-text {
+    margin-top: 10px;
+    font-size: 0.85rem;
+    color: #444;
+    font-weight: 500;
+}
+
+/* COLORS */
+.gmail {
+    background: #D44638;
+}
+
+.instagram {
+    background: radial-gradient(circle at 30% 107%,
+        #fdf497 0%, #fdf497 5%, #fd5949 45%,
+        #d6249f 60%, #285AEB 90%);
+}
+
+.whatsapp {
+    background: #25D366;
+}
+
+.tiktok {
+    background: linear-gradient(135deg, #000000, #333333);
+}
+
+/* HOVER */
+.contact-icons a:hover {
+    transform: scale(1.25);
+    box-shadow: 0 0 20px rgba(255,255,255,0.7);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #555;
+    padding: 15px;
+    background: rgba(255,255,255,0.3);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .contact-icons {
+        gap: 25px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="biodata.html">Biodata</a>
+        <a href="hobby.html">Hobby</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- CONTENT -->
+    <main class="content">
+        <div class="contact-box">
+            <h1>Her Contacts</h1>
+            <p>Stay connected with her 💌</p>
+
+            <div class="contact-icons">
+
+                <!-- EMAIL -->
+                <div class="icon-item">
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=adwinaedward@gmail.com"
+                       target="_blank" class="gmail">
+                        <i class="fa-solid fa-envelope"></i>
+                    </a>
+                    <div class="icon-text">Email</div>
+                </div>
+
+                <!-- INSTAGRAM (CORRECT LOGO) -->
+                <div class="icon-item">
+                    <a href="https://www.instagram.com/adwinawdw"
+                       target="_blank" class="instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <div class="icon-text">Instagram</div>
+                </div>
+
+                <!-- WHATSAPP -->
+                <div class="icon-item">
+                    <a href="https://wa.me/601164260920"
+                       target="_blank" class="whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <div class="icon-text">WhatsApp</div>
+                </div>
+
+                <!-- TIKTOK -->
+                <div class="icon-item">
+                    <a href="https://www.tiktok.com/@adwinaaa6?_r=1&_t=ZS-92p3c6Gw9dE"
+                       target="_blank" class="tiktok">
+                        <i class="fa-brands fa-tiktok"></i>
+                    </a>
+                    <div class="icon-text">TikTok</div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="copyright" style="color:#5a3e8c; font-weight:600;">
+        © 2025 ELSIE KULAN · All Rights Reserved
+    </div>
+    <div class="rights" style="color:#7a5fae; font-size:0.82rem; margin-top:4px;">
+        This website is developed to fulfill the requirement of IMD318 individual website.
+    </div>
+    <span class="date" style="display:block; color:#9c8fd1; font-size:0.75rem; margin-top:6px; opacity:0.8;">
+        <script type="text/javascript">
+            document.write("Current Date: " + Date());
+        </script>
+    </span>
+</footer>
+
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HOBBY</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    scroll-behavior: smooth;
+    font-family: Arial, sans-serif;
+}
+
+/* BACKGROUND */
+body {
+    background: linear-gradient(-45deg, #ffb3d9, #b3e5ff, #d8baff, #c8ffd4);
+    background-size: 400% 400%;
+    animation: gradientMove 6s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* WRAPPER */
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* NAVBAR */
+.navbar {
+    position: relative;
+    margin: 10px auto;
+    display: flex;
+    justify-content: center;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+    border-radius: 40px;
+    padding: 12px 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #5a3e8c;
+    padding: 6px 14px;
+    font-size: 0.95rem;
+}
+
+.navbar a:not(:last-child) {
+    border-right: 1px solid rgba(90,62,140,0.3);
+}
+
+.navbar a:hover {
+    color: #000;
+}
+
+/* CONTENT */
+.content {
+    flex: 1;
+    padding: 20px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* HOBBY BOX */
+.hobby-box {
+    width: 100%;
+    max-width: 1000px;
+    padding: 30px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    color: #5a3e8c;
+}
+
+/* SECTION */
+.section {
+    margin-bottom: 50px;
+    width: 100%;
+}
+
+.section-title {
+    font-size: 1.2rem;
+    color: #5a3e8c;
+    border-bottom: 2px solid rgba(90,62,140,0.3);
+    margin-bottom: 15px;
+    padding-bottom: 5px;
+}
+
+/* HOBBY GRID */
+.hobby-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.hobby-card {
+    background: rgba(255,255,255,0.35);
+    padding: 22px;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.hobby-icon {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hobby-card h3 {
+    margin: 10px 0;
+    color: #5a3e8c;
+}
+
+.hobby-card p {
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.5;
+}
+
+/* MUSIC LIST */
+.music-list {
+    text-align: left;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #444;
+    list-style: disc;
+    padding-left: 20px;
+}
+
+.music-list li {
+    margin-bottom: 6px;
+}
+
+/* AUDIO */
+audio {
+    width: 100%;
+    margin-top: 6px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.85rem;
+    color: #555;
+    padding: 15px;
+    background: rgba(255,255,255,0.3);
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    .content {
+        padding: 20px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="wrapper">
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="biodata.html">Biodata</a>
+        <a href="hobby.html">Hobby</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- CONTENT -->
+    <main class="content">
+        <div id="hobby" class="hobby-box">
+
+            <header>
+                <h1>Adwina's Hobbies</h1>
+                <p style="color:#555;">Activities that help her relax and enjoy her free time</p>
+            </header>
+
+            <!-- HOBBY GRID -->
+            <div class="hobby-grid">
+
+                <!-- MOVIE -->
+                <div class="hobby-card">
+                    <div class="hobby-icon">🎬</div>
+                    <h3>Watching Movies</h3>
+                    <p>here's her favourite movies of all time:</p>
+	<!-- Carousel -->
+<div id="demo" class="carousel slide" data-bs-ride="carousel">
+
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+  </div>
+
+<!-- The slideshow/carousel -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="dead poet.jpg" alt="Dead Poets Society" class="d-block" style="width:100%">
+    </div>
+    <div class="carousel-item">
+      <img src="boy.jpg" alt="Beautiful Boy" class="d-block" style="width:100%">
+    </div>
+    <div class="carousel-item">
+      <img src="the.jpg" alt="The Perks Of Being A Wallflower" class="d-block" style="width:100%">
+    </div>
+  </div>
+  
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+                </div>
+
+                <!-- MUSIC -->
+                <div class="hobby-card">
+                    <div class="hobby-icon">🎵</div>
+                    <h3>Listening to Music</h3>
+                    <p>these are some of her favourite songs:</p>
+                    <ul class="music-list">
+                        <li>Always – Rex Orange County</li>
+                        <audio controls preload="auto">
+                            <source src="always.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <li>Married With Children – Oasis</li>
+                        <audio controls preload="auto">
+                            <source src="Married With Children.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                        <li>Nabi Palsu – Hindia</li>
+                        <audio controls preload="auto">
+                            <source src="Nabi Palsu.mp3" type="audio/mpeg">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </ul>
+                </div>
+
+<!-- SPORTS -->
+<div class="hobby-card">
+    <div class="hobby-icon">🏓</div>
+    <h3>Playing Table Tennis</h3>
+    <p style="text-align: left;">
+        She loves playing table tennis, especially with her family and friends back home. It was their way of bonding that they always did during every gathering.
+    </p>
+ <img src="tennis.jpg" alt="Table tennis" class="d-block" style="width:100%">
+
+</div>
+
+        </div>
+    </main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="copyright" style="color:#5a3e8c; font-weight:600;">
+        © 2025 ELSIE KULAN · All Rights Reserved
+    </div>
+    <div class="rights" style="color:#7a5fae; font-size:0.82rem; margin-top:4px;">
+        This website is developed to fulfill the requirement of IMD318 individual website.
+    </div>
+    <span class="date" style="display:block; color:#9c8fd1; font-size:0.75rem; margin-top:6px; opacity:0.8;">
+        <script type="text/javascript">
+            document.write("Current Date: " + Date());
+        </script>
+    </span>
+</footer>
+
+
+</div>
+
+</body>
+</html>
